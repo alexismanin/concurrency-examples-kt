@@ -1,6 +1,6 @@
 package fr.amanin.concurrency.examples.coroutines
 
-fun log(message : String) = System.err.println("[from ${threadName()}]: $message")
+fun log(message : Any) = System.err.println("[from ${threadName()}]: $message")
 
 private fun threadName() : String {
     val name = Thread.currentThread().name
