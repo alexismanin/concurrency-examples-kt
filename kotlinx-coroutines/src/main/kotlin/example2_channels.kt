@@ -17,6 +17,8 @@ fun main() : Unit = runBlocking {
      * When creating a channel, we provide a buffering capacity, so it might "prefetch" a certain amount of results.
      * In this example, we provide an empty capacity.
      * It will force producers to suspend until a consumer asks data to the channel.
+     * Note: we could add additional arguments to specify a different behavior.
+     * Instead of suspending producers, we could drop values to make room in the channel.
      */
     val channel = Channel<Int>(0)
     val half = values.size / 2
