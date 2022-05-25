@@ -1,11 +1,7 @@
 package fr.amanin.concurrency.examples.reactor
 
-import reactor.core.publisher.SignalType
 import reactor.core.publisher.Sinks
-import reactor.core.publisher.Sinks.EmitResult
 import java.util.concurrent.ArrayBlockingQueue
-
-private fun failFast(s: SignalType, r: EmitResult) : Boolean = throw IllegalStateException("Cannot emt signal $s. Reason: $r")
 
 fun fibonacci(n: Int, output: Sinks.Many<Int>) {
 
