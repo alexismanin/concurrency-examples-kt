@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "go-concurrency-in-kotlin-jvm"
-include("reactor", "kotlinx-coroutines")
+include("common", "reactor", "kotlinx-coroutines")

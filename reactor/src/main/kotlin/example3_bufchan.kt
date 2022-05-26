@@ -1,5 +1,6 @@
 package fr.amanin.concurrency.examples.reactor
 
+import fr.amanin.concurrency.examples.common.log
 import reactor.core.publisher.SignalType
 import reactor.core.publisher.Sinks
 import reactor.core.publisher.Sinks.EmitResult

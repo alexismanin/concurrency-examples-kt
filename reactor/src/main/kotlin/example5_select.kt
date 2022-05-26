@@ -1,5 +1,6 @@
 package fr.amanin.concurrency.examples.reactor
 
+import fr.amanin.concurrency.examples.common.log
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.core.publisher.Sinks

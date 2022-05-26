@@ -1,5 +1,6 @@
 package fr.amanin.concurrency.examples.coroutines
 
+import fr.amanin.concurrency.examples.common.log
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 
