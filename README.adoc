@@ -1,0 +1,29 @@
+= Go concurrency examples in Kotlin (JVM)
+
+Reproduce examples provided in https://go.dev/tour/concurrency/[Go tour about concurrency] using Kotlin language on JVM platform.
+
+Inspired by the great article https://mccue.dev/pages/5-2-22-go-concurrency-in-java[Go concurrency examples in Java 19].
+
+== Content
+
+ * link:kotlinx-coroutines/[kotlinx-coroutines module] contains examples produced using Kotlinx Coroutine technology.
+ * link:reactor/[reactor module] contains examples produced using Spring Project-Reactor.
+ * link:common/[common module] contains a few utilities used by both modules cited above.
+
+== Notes
+
+ * My knowledge of both technologies is far from perfect. Feel free to provide feedback ;-)
+ * There's no proper documentation/article explaining examples step by step. All my thoughts and explanations are written as comments in source-code.
+ * Sometimes, the examples do not "go straight to the point". Do not be surpried.
+   I've deliberately added some logs or modified some behavior. This aims to:
+** Further test techologies
+** Verify observed behavior
+** Have fun learning :-)
+
+[WARNING]
+====
+Reactor examples (especially until 6) are rather complex and, I think not idiomatic.
+I've tried to stick to the Go channel approach, but it does not fit reactive-stream logic. It forces user to use "hot streams", which break proper back-pressure management, etc.
+
+_Note_: maybe in the future I will add another set of reworked examples using cold streams. That will provide a far better overview of Reactor.
+====
