@@ -120,7 +120,9 @@ fun <I, O> filterNewValues(cacheAction: suspend (I) -> CacheResult<O>): suspend 
 fun main() : Unit = runBlocking {
     val fetchCaching = caching(::fetch)
     val fetchOnlyNewValues = filterNewValues(fetchCaching)
-    crawl("https://golang.org", fetchOnlyNewValues, 4)
+    // High max-depth limit ensures sanity of our program. i.e, it' not the depth fail-safe that stops the crawler,
+    // but the fact that urls already visited are detected and ignored, which allow to complete page flow.
+    crawl("https://golang.org", fetchOnlyNewValues, 50)
         .map { it.body }
         .collect(::println)
 }
